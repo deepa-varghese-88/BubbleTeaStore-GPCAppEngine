@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+   <html>
+   <body>
+    <h2>Bubble Trouble fUn TiMeS</h2>
+    <form action="{{ url_for('fun') }}" method="POST" enctype="multipart/form-data">
+      Upload File: <input type="file" name="file"><br>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+    {% for image_entity in image_entities %}
+      <img src="{{image_entity['image_public_url']}}" width=200 height=200>
+      <p>{{image_entity['blob_name']}} was uploaded {{image_entity['timestamp']}}.</p>
+      
+    {% endfor %}
+   </body>
+   </html>
+{% endblock %}

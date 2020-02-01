@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Let us know about a new location!</h2>
+    <form action="{{ url_for('add') }}" method=post>
+    <p class="heading">Name: <input id="input" type=text name=name>
+    <p class="heading">Review: <textarea id="input" rows=5 cols=50 name=review></textarea></p>
+    <p class="heading">Recommendation: <input id="input" type=text name=drink_to_order>
+    <p><input type=submit value=Add></p>
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+<title>Bubble Tea Stores</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div id="home"><a href="{{ url_for('index') }}">Home</a></div>
+<div class=page>
+    {% block content %}
+    {% endblock %}
+</div>
+</html>

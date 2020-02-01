@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Bubble Tea Store Locations</h2>
+    <table id="BubbleTea">
+    <TR>
+        <TH>Name</TH>
+        <TH>Address</TH>
+	<TH>Open</TH>
+        <TH>Rating</TH>
+        <TH>Review</TH>
+        <TH>Recommendation</TH>
+	<TH>Nutrition</TH>
+    </TR>
+    {% for entry in entries %}
+    <TR>
+       <TD>{{ entry.name }}</TD>
+       <TD>{{ entry.address }}</TD>
+       <TD>{{ entry.opening }}</TD>
+       <TD>{{ entry.rating }}</TD>
+       <TD>{{ entry.review }}</TD>
+       <TD>{{ entry.drink_to_order }}</TD>
+       <TD>{{ entry.nutrition }}</TD>
+    </TR>
+    {% endfor %}
+    </table>    
+{% endblock %}

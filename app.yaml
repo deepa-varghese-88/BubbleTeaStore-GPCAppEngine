@@ -1,0 +1,21 @@
+runtime: python37
+env: standard
+entrypoint: gunicorn -b :$PORT app:app
+
+runtime_config:
+  python_version: 3
+
+env_variables:
+  CLOUD_STORAGE_BUCKET: cpb100-255205
+  PLACES_API_KEY: AIzaSyBI8179aNanZ5-Sl2ORlJOzhlFQOlW-1Uc
+  NUTRITION_API_ID: 5c2df34a
+  NUTRITION_API_KEY: 8fe8b429f197772c882ff65b93dfa7fa
+  WEATHER_API_KEY: xRDLck9bfGJ8XTm1FsfyiXURXnrwyjM5
+
+manual_scaling:
+  instances: 1
+
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
